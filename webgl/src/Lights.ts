@@ -1,5 +1,5 @@
-import { v3ToArray, Vector3 } from "./VectorTypes";
-import { RgbColor, rgbColorToArray } from "./ColorTypes";
+import { v3ToArray, Vector3 } from "./Types/VectorTypes";
+import { RgbColor, rgbColorToArray } from "./Types/ColorTypes";
 import IUniformSettable from "./IUniformSettable";
 
 export default class Light implements IUniformSettable {

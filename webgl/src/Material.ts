@@ -1,4 +1,4 @@
-import { RgbaColor, rgbaColorToArray } from "./ColorTypes";
+import { RgbaColor, rgbaColorToArray } from "./Types/ColorTypes";
 import IUniformSettable from "./IUniformSettable";
 
 export default class Material implements IUniformSettable {
