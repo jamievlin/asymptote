@@ -60,3 +60,21 @@ export function maxbound(v: Box): Vector3 {
     Math.max(v[0].z, v[1].z, v[2].z, v[3].z, v[4].z, v[5].z, v[6].z, v[7].z),
   );
 }
+
+export function Tcorners(
+  m: Vector3,
+  M: Vector3,
+  T: (arg: Vector3) => Vector3,
+): [Vector3, Vector3] {
+  const v: Box = [
+    T(m),
+    T(vec3(m.x, m.y, M.z)),
+    T(vec3(m.x, M.y, m.z)),
+    T(vec3(m.x, M.y, M.z)),
+    T(vec3(M.x, m.y, m.z)),
+    T(vec3(M.x, m.y, M.z)),
+    T(vec3(M.x, M.y, m.z)),
+    T(M),
+  ];
+  return [minbound(v), maxbound(v)];
+}
